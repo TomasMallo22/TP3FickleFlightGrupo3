@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TP3FickleFlightGrupo3</string>
+    <string name="profile_background" />
+    <string name="profile_picture" />
 </resources>
