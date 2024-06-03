@@ -1,6 +1,12 @@
-package com.example.tp3fickleflightgrupo3.data.model
+data class FlightsResponse(
+    val best_flights: List<FlightWrapper>?
+)
 
-data class FlightsModel(
+data class FlightWrapper(
+    val flights: List<Flight>?
+)
+
+data class Flight(
     val departure_airport: Airport,
     val arrival_airport: Airport,
     val duration: Int,

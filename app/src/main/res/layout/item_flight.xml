@@ -1,0 +1,47 @@
+<!-- res/layout/item_flight.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/airlineLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/airline_logo" />
+
+    <TextView
+        android:id="@+id/airlineName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Airline Name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/departureAirport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Departure Airport" />
+
+    <TextView
+        android:id="@+id/arrivalAirport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Arrival Airport" />
+
+    <TextView
+        android:id="@+id/flightDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Duration" />
+
+    <TextView
+        android:id="@+id/flightNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flight No" />
+
+</LinearLayout>
