@@ -12,133 +12,119 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
                 android:src="@drawable/boracay"
                 tools:ignore="ContentDescription" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="8dp">
-
-                <TextView
-                    android:id="@+id/flight_destination"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/boracay"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/flight_duration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_toEndOf="@id/flight_destination"
-                    android:padding="4dp"
-                    android:text="@string/_5d4n"
-                    android:textColor="@android:color/black"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/flight_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:text="@string/_349"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:paddingTop="4dp"
-                    tools:ignore="RelativeOverlap" />
-
-                <TextView
-                    android:id="@+id/flight_location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/flight_destination"
-                    android:text="@string/philippines"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/darker_gray" />
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/flight_overview_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/overview"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:paddingTop="16dp" />
-
-            <TextView
-                android:id="@+id/flight_overview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Descripcion"
-                android:paddingTop="8dp" />
-
-            <TextView
-                android:id="@+id/flight_photos_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/photos"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:paddingTop="16dp" />
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="8dp">
+                android:layout_height="734dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_background"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <ImageView
-                    android:id="@+id/photo1"
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/photo"
-                    android:scaleType="centerCrop"
-                    tools:ignore="ContentDescription" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp">
 
-                <ImageView
-                    android:id="@+id/photo2"
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/photo_1"
-                    android:scaleType="centerCrop"
-                    tools:ignore="ContentDescription" />
+                    <TextView
+                        android:id="@+id/flight_destination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/boracay"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/photo3"
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/photo_2"
-                    android:scaleType="centerCrop"
-                    tools:ignore="ContentDescription" />
+                    <TextView
+                        android:id="@+id/flight_code"
+                        android:layout_width="44dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@id/flight_destination"
+                        android:background="@drawable/rounded_corner_background"
+                        android:padding="4dp"
+                        android:text="@string/_5d4n"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/flight_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:paddingTop="4dp"
+                        android:text="@string/_349"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/flight_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/flight_destination"
+                        android:text="@string/philippines"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/flight_overview_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:text="@string/overview"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/flight_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="@string/Descripcion" />
+
+                <TextView
+                    android:id="@+id/flight_photos_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:text="@string/photos"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/photoRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/item_photo" />
+
+                <Button
+                    android:id="@+id/bookNowButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="32dp"
+                    android:backgroundTint="@color/orange"
+                    android:text="@string/book_now"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/bookNowButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/book_now"
-                android:textAllCaps="false"
-                android:backgroundTint="@color/orange"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="16dp" />
-        </LinearLayout>
+        </FrameLayout>
     </ScrollView>
 </layout>
