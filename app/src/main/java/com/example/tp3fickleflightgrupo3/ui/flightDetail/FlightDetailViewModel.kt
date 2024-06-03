@@ -4,14 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.tp3fickleflightgrupo3.data.model.FlightsModel
+import Flight
 import com.example.tp3fickleflightgrupo3.service.FlightsApi
 import kotlinx.coroutines.launch
 import retrofit2.await
 
 class FlightDetailViewModel : ViewModel() {
-    private val _flightDetails = MutableLiveData<FlightsModel>()
-    val flightDetails: LiveData<FlightsModel> get() = _flightDetails
+    private val _flightDetails = MutableLiveData<Flight>()
+    val flightDetails: LiveData<Flight> get() = _flightDetails
 
     private val _error = MutableLiveData<String>()
     val error: LiveData<String> get() = _error
@@ -25,8 +25,8 @@ class FlightDetailViewModel : ViewModel() {
             try {
                 val flightService = FlightsApi.create()
                 val response = flightService.getFlights().await()
-                if (response.isNotEmpty()) {
-                    _flightDetails.postValue(response[0]) // Assuming we want the first item
+                if (response.best_flights?.isNotEmpty() == true) {
+                    _flightDetails.postValue(response.best_flights[0].flights?.get(0))
                 } else {
                     _error.postValue("No flight details available")
                 }
@@ -36,7 +36,7 @@ class FlightDetailViewModel : ViewModel() {
         }
     }
 
-    fun setFlightDetails(flight: FlightsModel) {
+    fun setFlightDetails(flight: Flight) {
         _flightDetails.value = flight
     }
 
