@@ -3,4 +3,8 @@
     <string name="profile_background" />
     <string name="profile_picture" />
     <string name="airline_logo">Airline Logo</string>
+    <string name="book_now">Book Now</string>
+    <string name="photos">Photos</string>
+    <string name="overview">Overview</string>
+    <string name="_349">$349</string>
 </resources>
