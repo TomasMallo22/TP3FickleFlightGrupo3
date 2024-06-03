@@ -14,7 +14,7 @@ class FlightViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val departureAirport: TextView = itemView.findViewById(R.id.departureAirport)
     private val arrivalAirport: TextView = itemView.findViewById(R.id.arrivalAirport)
     private val flightDuration: TextView = itemView.findViewById(R.id.flightDuration)
-    private val flightNumber: TextView = itemView.findViewById(R.id.flightNumber)
+    private val flightNumber: TextView = itemView.findViewById(R.id.flightPrice)
 
     fun bind(flight: Flight) {
         Glide.with(itemView.context).load(flight.airline_logo).into(airlineLogo)
