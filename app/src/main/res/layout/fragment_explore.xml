@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.tp3fickleflightgrupo3.ui.explore.ExploreViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.explore.ExploreFragment">
+
+        <!-- Paris Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_paris"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/paris" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/heart_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/heart"
+                    android:background="@null"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_paris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paris"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_margin="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="From"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:layout_margin="2dp"
+                    app:layout_constraintBottom_toTopOf="@id/text_price"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$1299"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/text_paris"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Flight Block -->
+        <LinearLayout
+            android:id="@+id/flight_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_paris">
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="18dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_flight_button_foreground"
+                android:background="@drawable/ic_flight_button_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:text="Flight"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Trending Destinations -->
+        <TextView
+            android:id="@+id/text_trending_destinations"
+            android:layout_height="24dp"
+            android:layout_width="174dp"
+            android:text="Trending Destinations"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/flight_block"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/recycler_trending_destinations" />
+
+        <TextView
+            android:id="@+id/text_see_all_trending"
+            android:layout_height="17dp"
+            android:layout_width="44dp"
+            android:text="See All"
+            android:textSize="14sp"
+            android:lineSpacingExtra="1.94dp"
+            app:layout_constraintTop_toTopOf="@id/text_trending_destinations"
+            app:layout_constraintBottom_toBottomOf="@id/text_trending_destinations"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_trending_destinations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_trending_destinations" />
+
+        <!-- Offers -->
+        <TextView
+            android:id="@+id/text_offers"
+            android:layout_height="24dp"
+            android:layout_width="50dp"
+            android:text="Offers"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/recycler_trending_destinations"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/recycler_offers" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_offers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_offers" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
