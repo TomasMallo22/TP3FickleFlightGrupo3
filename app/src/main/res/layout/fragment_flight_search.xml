@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.flightSearch.FlightSearchFragment">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etDeparture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Departure" />
+
+        <EditText
+            android:id="@+id/etArrival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Arrival" />
+
+        <EditText
+            android:id="@+id/etDepartureDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Departure Date" />
+
+        <EditText
+            android:id="@+id/etReturnDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Return Date" />
+
+        <EditText
+            android:id="@+id/etPassengers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Passengers" />
+
+        <AutoCompleteTextView
+            android:id="@+id/etClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Class" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search" />
+
+    </LinearLayout>
+</layout>
