@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/flightSearchFragment">
+
+    <fragment
+        android:id="@+id/flightSearchFragment"
+        android:name="com.example.tp3fickleflightgrupo3.ui.flightSearch.FlightSearchFragment"
+        android:label="Flight Search"
+        tools:layout="@layout/fragment_flight_search">
+        <action
+            android:id="@+id/action_flightSearchFragment_to_flightResultsFragment"
+            app:destination="@id/flightResultsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/flightResultsFragment"
+        android:name="com.example.tp3fickleflightgrupo3.ui.flightResult.FlightResultsFragment"
+        android:label="Flight Results"
+        tools:layout="@layout/fragment_flight_result">
+        <argument
+            android:name="flights"
+            app:argType="string" />
+    </fragment>
+</navigation>
