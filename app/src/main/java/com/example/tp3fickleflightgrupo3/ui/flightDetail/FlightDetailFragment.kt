@@ -28,7 +28,7 @@ class FlightDetailFragment : Fragment() {
         viewModel.fetchFlightDetails()
         // Observe ViewModel and bind data
         viewModel.flightDetails.observe(viewLifecycleOwner, Observer {
-            binding.flight = viewModel
+            binding.viewModel = viewModel
         })
         // Observe for errors
         viewModel.error.observe(viewLifecycleOwner, Observer { errorMessage ->
