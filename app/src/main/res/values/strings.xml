@@ -7,4 +7,10 @@
     <string name="photos">Photos</string>
     <string name="overview">Overview</string>
     <string name="_349">$349</string>
+    <string name="explore">Explore</string>
+    <string name="search">Search</string>
+    <string name="offers">Offers</string>
+    <string name="profile">Profile</string>
+    <string name="navigation_drawer_open">Abierto\n</string>
+    <string name="navigation_drawer_close">Cerrar\n</string>
 </resources>
