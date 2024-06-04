@@ -28,4 +28,7 @@
     <string name="generales">Generales</string>
     <string name="modo_oscuro">Modo Oscuro</string>
     <string name="heart" />
+    <string name="flight_info">EZE ➔ LAX\n29 July, 2022</string>
+    <string name="search_results">35 results found</string>
+    <string name="options" />
 </resources>

@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.example.tp3fickleflightgrupo3.R
 import com.example.tp3fickleflightgrupo3.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
@@ -28,6 +30,10 @@ class ProfileFragment : Fragment() {
 
         binding.backArrow.setOnClickListener {
             requireActivity().onBackPressed()
+        }
+
+        binding.settingsIcon.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_settingsFragment)
         }
     }
 

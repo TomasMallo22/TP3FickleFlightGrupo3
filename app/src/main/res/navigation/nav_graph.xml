@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_flightResultsFragment_to_flightDetailFragment"
             app:destination="@id/flightDetailFragment" />
+        <action
+            android:id="@+id/action_flightResultsFragment_to_flightSearchFragment"
+            app:destination="@id/flightSearchFragment" />
     </fragment>
 
 
@@ -44,6 +47,9 @@
         android:name="com.example.tp3fickleflightgrupo3.ui.profile.ProfileFragment"
         android:label="Perfil"
         tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
   
     <fragment
