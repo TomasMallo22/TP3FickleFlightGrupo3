@@ -25,4 +25,6 @@
     <string name="app_version">App version 0.0.1</string>
     <string name="flecha" />
     <string name="lapiz" />
+    <string name="generales">Generales</string>
+    <string name="modo_oscuro">Modo Oscuro</string>
 </resources>
