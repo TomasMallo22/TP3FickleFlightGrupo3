@@ -34,13 +34,11 @@
             app:destination="@id/flightSearchFragment" />
     </fragment>
 
-
     <fragment
         android:id="@+id/flightDetailFragment"
         android:name="com.example.tp3fickleflightgrupo3.ui.flightDetail.FlightDetailFragment"
         android:label="Flight Detail"
         tools:layout="@layout/fragment_flight_detail" />
-
 
     <fragment
         android:id="@+id/profileFragment"
@@ -58,6 +56,18 @@
         android:label="Explore"
         tools:layout="@layout/fragment_explore">
         <action
+            android:id="@+id/action_exploreFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_drawerMenuFragment"
+            app:destination="@id/drawerMenuFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_flightSearchFragment"
+            app:destination="@id/flightSearchFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_flightDetailFragment"
+            app:destination="@id/flightDetailFragment" />
+        <action
             android:id="@+id/action_exploreFragment_to_offerFragment"
             app:destination="@id/offerFragment" />
     </fragment>
@@ -67,6 +77,12 @@
         android:name="com.example.tp3fickleflightgrupo3.ui.offers.OfferFragment"
         android:label="Offers"
         tools:layout="@layout/fragment_offer" />
+
+    <fragment
+        android:id="@+id/drawerMenuFragment"
+        android:name="com.example.tp3fickleflightgrupo3.ui.drawerMenu.DrawerMenuFragment"
+        android:label="Drawer Menu"
+        tools:layout="@layout/fragment_drawer_menu" />
 
     <fragment
         android:id="@+id/settingsFragment"
