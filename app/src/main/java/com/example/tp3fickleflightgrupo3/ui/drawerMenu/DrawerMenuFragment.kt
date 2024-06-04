@@ -26,8 +26,6 @@ class DrawerMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Observe ViewModel and set up UI interactions
-        // Example: viewModel.someLiveData.observe(viewLifecycleOwner, Observer { ... })
 
         binding.menuProfile.setOnClickListener {
 
