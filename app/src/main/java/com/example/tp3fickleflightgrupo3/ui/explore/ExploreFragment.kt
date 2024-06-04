@@ -7,10 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tp3fickleflightgrupo3.adapters.DestinationAdapter
+import com.example.tp3fickleflightgrupo3.adapters.OfferAdapter
 import com.example.tp3fickleflightgrupo3.adapters.OfferExploreAdapter
+import com.example.tp3fickleflightgrupo3.data.model.Offer
 import com.example.tp3fickleflightgrupo3.databinding.FragmentExploreBinding
+import com.example.tp3fickleflightgrupo3.ui.flightResult.FlightResultsFragmentDirections
 
 class ExploreFragment : Fragment() {
 
@@ -27,6 +32,7 @@ class ExploreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentExploreBinding.inflate(inflater, container, false)
+
         return binding.root
     }
 
@@ -35,7 +41,10 @@ class ExploreFragment : Fragment() {
 
         // Inicializar adaptadores
         destinationsAdapter = DestinationAdapter(emptyList())
-        offersAdapter = OfferExploreAdapter(emptyList())
+        offersAdapter = OfferExploreAdapter(emptyList()) { offer ->
+            val action = ExploreFragmentDirections.actionExploreFragmentToOfferFragment()
+            findNavController().navigate(action)
+        }
 
         // Configurar LayoutManager y adaptadores para RecyclerViews
         binding.recyclerTrendingDestinations.apply {

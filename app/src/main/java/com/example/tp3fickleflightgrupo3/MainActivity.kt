@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         R.id.flightSearchFragment,
         R.id.offerFragment,
         R.id.profileFragment,
+        R.id.offerFragment,
+        R.id.settingsFragment
     )
 
     private lateinit var binding: ActivityMainBinding
@@ -70,7 +72,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.exploreFragment,
                 R.id.flightSearchFragment,
                 R.id.offerFragment,
-                R.id.profileFragment
+                R.id.profileFragment,
+                R.id.settingsFragment
                 -> {
                     navView.visibility = BottomNavigationView.VISIBLE
                     binding.contentMainInclude.customToolbar.visibility = MaterialToolbar.VISIBLE
