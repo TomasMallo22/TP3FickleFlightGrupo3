@@ -47,7 +47,11 @@
         android:id="@+id/exploreFragment"
         android:name="com.example.tp3fickleflightgrupo3.ui.explore.ExploreFragment"
         android:label="Explore"
-        tools:layout="@layout/fragment_explore" />
+        tools:layout="@layout/fragment_explore">
+        <action
+            android:id="@+id/action_recycler_offers_explore_to_offerFragment"
+            app:destination="@id/offerFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/offerFragment"

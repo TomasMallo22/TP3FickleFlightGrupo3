@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         R.id.flightSearchFragment,
         R.id.offerFragment,
         R.id.profileFragment,
+        R.id.offerFragment
     )
 
     private lateinit var binding: ActivityMainBinding
