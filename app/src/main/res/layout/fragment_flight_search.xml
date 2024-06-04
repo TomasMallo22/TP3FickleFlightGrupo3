@@ -48,9 +48,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="#F3F5F9"
                     android:text="Round Trip"
-                    android:textColor="@color/black" />
+                    android:textColor="#9EAAB6" />
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
             <LinearLayout
@@ -195,7 +195,7 @@
                     android:id="@+id/btnSearch"
                     style="@style/FlightSearchButton"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginTop="16dp"
                     android:text="Search"
                     app:cornerRadius="5dp" />

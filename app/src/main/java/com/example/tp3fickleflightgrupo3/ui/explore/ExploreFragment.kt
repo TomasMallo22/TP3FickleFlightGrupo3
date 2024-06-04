@@ -10,11 +10,13 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.tp3fickleflightgrupo3.R
 import com.example.tp3fickleflightgrupo3.adapters.DestinationAdapter
 import com.example.tp3fickleflightgrupo3.adapters.OfferAdapter
 import com.example.tp3fickleflightgrupo3.adapters.OfferExploreAdapter
 import com.example.tp3fickleflightgrupo3.data.model.Offer
 import com.example.tp3fickleflightgrupo3.databinding.FragmentExploreBinding
+import com.example.tp3fickleflightgrupo3.data.model.Destination
 import com.example.tp3fickleflightgrupo3.ui.flightResult.FlightResultsFragmentDirections
 
 class ExploreFragment : Fragment() {
@@ -39,12 +41,17 @@ class ExploreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         // Inicializar adaptadores
-        destinationsAdapter = DestinationAdapter(emptyList())
+        destinationsAdapter = DestinationAdapter(emptyList()) { destination ->
+            onDestinationClicked(destination)
+        }
+
         offersAdapter = OfferExploreAdapter(emptyList()) { offer ->
             val action = ExploreFragmentDirections.actionExploreFragmentToOfferFragment()
             findNavController().navigate(action)
         }
+
 
         // Configurar LayoutManager y adaptadores para RecyclerViews
         binding.recyclerTrendingDestinations.apply {
@@ -57,9 +64,25 @@ class ExploreFragment : Fragment() {
             adapter = offersAdapter
         }
 
+        // Configurar clic en flight_block para navegar a FlightSearchFragment
+        binding.icPlane.setOnClickListener {
+            findNavController().navigate(R.id.action_exploreFragment_to_flightSearchFragment)
+        }
+
+        // Configurar clic en "See All" para navegar a FlightDetailFragment
+        binding.textSeeAllTrending.setOnClickListener {
+            findNavController().navigate(R.id.action_exploreFragment_to_flightDetailFragment)
+        }
+
         // Observa los datos del ViewModel
         observeViewModel()
     }
+
+    @Suppress("UNUSED_PARAMETER")
+    private fun onDestinationClicked(destination: Destination) {
+        findNavController().navigate(R.id.action_exploreFragment_to_flightDetailFragment)
+    }
+
 
     private fun observeViewModel() {
         // Obtener y observar los datos de los destinos populares
