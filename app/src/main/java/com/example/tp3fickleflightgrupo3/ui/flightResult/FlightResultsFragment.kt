@@ -32,6 +32,7 @@ class FlightResultsFragment : Fragment() {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = flightAdapter
 
+
         viewModel.flights.observe(viewLifecycleOwner, Observer { flights ->
             flights?.let {
                 flightAdapter.submitList(it)
