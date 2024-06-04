@@ -15,119 +15,209 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#F4F4F4"
-        android:padding="16dp"
+        android:padding="12dp"
         tools:context=".ui.flightSearch.FlightSearchFragment">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="432dp"
             android:background="@drawable/rounded_background"
-            android:padding="16dp">
+            android:padding="12dp">
 
             <com.google.android.material.button.MaterialButtonToggleGroup
                 android:id="@+id/buttonToggleGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                app:singleSelection="true"
-                android:padding="8dp">
+                android:padding="8dp"
+                app:singleSelection="true">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnOneWay"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="One Way"
-                    android:textColor="@color/white"
                     android:backgroundTint="@color/colorPrimary"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                    android:text="One Way"
+                    android:textColor="@color/white" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnRoundTrip"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Round Trip"
-                    android:textColor="@color/black"
                     android:backgroundTint="@color/white"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                    android:text="Round Trip"
+                    android:textColor="@color/black" />
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp"
                 android:layout_below="@id/buttonToggleGroup"
-                android:layout_marginTop="16dp">
-
-                <EditText
-                    android:id="@+id/etDeparture"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Select Departure"
-                    android:drawableLeft="@drawable/ic_departure"
-                    style="@style/EditTextStyle" />
-
-                <EditText
-                    android:id="@+id/etArrival"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Select Arrival"
-                    android:drawableLeft="@drawable/ic_arrival"
-                    style="@style/EditTextStyle" />
-
-                <EditText
-                    android:id="@+id/etDepartureDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Select Date"
-                    android:drawableLeft="@drawable/ic_calendar"
-                    style="@style/EditTextStyle" />
-
-                <EditText
-                    android:id="@+id/etReturnDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Select Return Date"
-                    android:drawableLeft="@drawable/ic_calendar"
-                    android:visibility="gone"
-                    style="@style/EditTextStyle" />
+                android:layout_marginTop="12dp"
+                android:background="@drawable/rounded_background"
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_departure" />
+
+                    <EditText
+                        android:id="@+id/etDeparture"
+                        style="@style/EditTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Select Departure" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_arrival" />
+
+                    <EditText
+                        android:id="@+id/etArrival"
+                        style="@style/EditTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Select Arrival" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_calendar" />
+
+                    <EditText
+                        android:id="@+id/etDepartureDate"
+                        style="@style/EditTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Select Date" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivReturnDateIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_calendar"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/etReturnDate"
+                        style="@style/EditTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Select Return Date"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:weightSum="2">
 
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_passenger" />
+
                     <EditText
                         android:id="@+id/etPassengers"
+                        style="@style/EditTextStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:hint="Passengers"
-                        android:drawableLeft="@drawable/ic_passenger"
-                        style="@style/EditTextStyle" />
+                        android:hint="Passengers" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_class" />
 
                     <AutoCompleteTextView
                         android:id="@+id/etClass"
+                        style="@style/EditTextStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:hint="Class"
-                        android:drawableLeft="@drawable/ic_class"
-                        style="@style/EditTextStyle" />
+                        android:hint="Class" />
                 </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSearch"
+                    style="@style/FlightSearchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Search"
+                    app:cornerRadius="5dp" />
             </LinearLayout>
         </RelativeLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSearch"
-            style="@style/FlightSearchButton"
+        <TextView
+            android:id="@+id/text_offers"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Offers"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:paddingStart="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerOffersExplore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Search"
-            android:layout_marginTop="16dp"
-            app:cornerRadius="5dp" />
+            android:layout_marginTop="3dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp"
+            android:orientation="horizontal" />
     </LinearLayout>
 </layout>
