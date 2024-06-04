@@ -20,194 +20,193 @@
             <FrameLayout
                 android:id="@+id/container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            android:background="?android:attr/windowBackground">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/profile_image"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:src="@mipmap/ic_profile_image_round"
-                        android:layout_weight="0" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="16dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hello"
-                            android:textColor="#757575" />
-
-                        <TextView
-                            android:id="@+id/profile_name"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Bruce Wayne"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/darker_gray"
-                    android:layout_marginBottom="16dp" />
-
-                <!-- Navigation Items -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <!-- Menu items -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:id="@+id/menu_profile">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/ic_drawermenu_profile" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="Profile"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:id="@+id/menu_notifications">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/ic_drawermenu_notification" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="Notification"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:id="@+id/menu_help">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/ic_drawermenu_help" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="Get Help"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:id="@+id/menu_calendar">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/ic_drawermenu_calendar" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="Calendar"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="16dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:id="@+id/menu_settings">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/ic_profile_settings" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="Settings"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                </LinearLayout>
+                android:layout_height="match_parent">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="bottom|start"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
                     android:text="App version 0.0.1" />
 
-            </LinearLayout>
-        </com.google.android.material.navigation.NavigationView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="116dp"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="0"
+                            android:src="@mipmap/ic_profile_image_foreground" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Hello"
+                                android:textColor="#757575" />
+
+                            <TextView
+                                android:id="@+id/profile_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Macy Johnson"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/menu_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_drawermenu_profile" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="Profile"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menu_notifications"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_drawermenu_notification" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="Notification"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menu_help"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_drawermenu_help" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="Get Help"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menu_calendar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_drawermenu_calendar" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="Calendar"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/menu_settings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_profile_settings" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="Settings"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+                <com.google.android.material.navigation.NavigationView
+                    android:id="@+id/nav_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:fitsSystemWindows="true"
+                    android:background="?android:attr/windowBackground">
+
+                </com.google.android.material.navigation.NavigationView>
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>
