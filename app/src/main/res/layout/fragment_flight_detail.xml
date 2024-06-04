@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -18,16 +19,46 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="160dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/boracay"
                 tools:ignore="ContentDescription" />
 
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|top"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/flecha"
+                android:src="@drawable/ic_profile_flecha" />
+
+
+            <FrameLayout
+                android:id="@+id/favIconContainer"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|top"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/circle_background"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/favIcon"
+                    android:layout_width="38dp"
+                    android:layout_height="35dp"
+                    android:contentDescription="@string/heart"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_heart_state" />
+            </FrameLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="734dp"
+                android:layout_height="656dp"
                 android:layout_gravity="bottom"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="60dp"
                 android:background="@drawable/rounded_background"
                 android:clipChildren="false"
                 android:clipToPadding="false"

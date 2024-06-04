@@ -27,4 +27,5 @@
     <string name="lapiz" />
     <string name="generales">Generales</string>
     <string name="modo_oscuro">Modo Oscuro</string>
+    <string name="heart" />
 </resources>
