@@ -20,7 +20,7 @@
             android:layout_height="200dp"
             android:contentDescription="@string/profile_background"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_background_image" />
+            android:src="@drawable/boracay" />
 
         <ImageView
             android:id="@+id/backArrow"

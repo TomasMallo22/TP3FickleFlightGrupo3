@@ -75,20 +75,21 @@ class MainActivity : AppCompatActivity() {
 
             when (destination.id) {
                 R.id.flightSearchFragment,
-                R.id.offerFragment,
-                R.id.profileFragment
+                R.id.offerFragment
                 -> {
                     navView.visibility = BottomNavigationView.VISIBLE
                     binding.contentMainInclude.customToolbar.visibility = MaterialToolbar.VISIBLE
-//                    binding.contentMainInclude.customToolbar.logo = null
                     profileImage.visibility = View.GONE
                     logo.visibility = View.GONE
+                }
+                R.id.profileFragment -> {
+                    navView.visibility = BottomNavigationView.VISIBLE
+                    binding.contentMainInclude.customToolbar.visibility = MaterialToolbar.GONE
                 }
                 R.id.exploreFragment,
                 R.id.settingsFragment -> {
                     navView.visibility = BottomNavigationView.VISIBLE
                     binding.contentMainInclude.customToolbar.visibility = MaterialToolbar.VISIBLE
-//                    binding.contentMainInclude.customToolbar.logo = ContextCompat.getDrawable(this, R.drawable.logo)
                     binding.contentMainInclude.customToolbar.title = null
                     profileImage.visibility = View.VISIBLE
                     logo.visibility = View.VISIBLE
