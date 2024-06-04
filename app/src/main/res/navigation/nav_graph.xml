@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_flightSearchFragment_to_flightResultsFragment"
             app:destination="@id/flightResultsFragment" />
+        <action
+            android:id="@+id/action_flightSearchFragment_to_offerFragment"
+            app:destination="@id/offerFragment" />
     </fragment>
 
     <fragment
@@ -26,8 +29,10 @@
         <action
             android:id="@+id/action_flightResultsFragment_to_flightDetailFragment"
             app:destination="@id/flightDetailFragment" />
+        <action
+            android:id="@+id/action_flightResultsFragment_to_flightSearchFragment"
+            app:destination="@id/flightSearchFragment" />
     </fragment>
-
 
     <fragment
         android:id="@+id/flightDetailFragment"
@@ -35,12 +40,14 @@
         android:label="Flight Detail"
         tools:layout="@layout/fragment_flight_detail" />
 
-
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.tp3fickleflightgrupo3.ui.profile.ProfileFragment"
         android:label="Perfil"
         tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
   
     <fragment
@@ -60,6 +67,9 @@
         <action
             android:id="@+id/action_exploreFragment_to_flightDetailFragment"
             app:destination="@id/flightDetailFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_offerFragment"
+            app:destination="@id/offerFragment" />
     </fragment>
 
     <fragment
@@ -73,5 +83,11 @@
         android:name="com.example.tp3fickleflightgrupo3.ui.drawerMenu.DrawerMenuFragment"
         android:label="Drawer Menu"
         tools:layout="@layout/fragment_drawer_menu" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.tp3fickleflightgrupo3.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
 
 </navigation>

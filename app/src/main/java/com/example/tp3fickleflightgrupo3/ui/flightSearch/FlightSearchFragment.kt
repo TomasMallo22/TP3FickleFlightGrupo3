@@ -80,7 +80,10 @@ class FlightSearchFragment : Fragment() {
             }
         })
 
-        offersAdapter = OfferExploreAdapter(emptyList())
+        offersAdapter = OfferExploreAdapter(emptyList()) { offer ->
+            val action = FlightSearchFragmentDirections.actionFlightSearchFragmentToOfferFragment()
+            findNavController().navigate(action)
+        }
 
         binding.recyclerOffersExplore.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)

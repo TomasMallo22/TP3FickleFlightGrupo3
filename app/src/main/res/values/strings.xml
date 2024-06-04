@@ -35,4 +35,8 @@
     <string name="price_paris">$1299</string>
     <string name="from">From</string>
     <string name="paris">Paris</string>
+    <string name="heart" />
+    <string name="flight_info">EZE ➔ LAX\n29 July, 2022</string>
+    <string name="search_results">35 results found</string>
+    <string name="options" />
 </resources>
