@@ -12,4 +12,6 @@
     <string name="boracay">Boracay</string>
     <string name="_5d4n">5D4N</string>
     <string name="msg_vuelo">Vuelo reservado con exito!</string>
+    <string name="generales">Generales</string>
+    <string name="modo_oscuro">Modo Oscuro</string>
 </resources>
