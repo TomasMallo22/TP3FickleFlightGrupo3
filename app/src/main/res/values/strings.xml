@@ -16,4 +16,6 @@
     <string name="flight_icon">Flight Icon</string>
     <string name="class_icon">Class Icon</string>
     <string name="view_details">View Details</string>
+    <string name="flecha" />
+    <string name="lapiz" />
 </resources>
