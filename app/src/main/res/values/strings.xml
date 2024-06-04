@@ -2,7 +2,6 @@
     <string name="app_name">TP3FickleFlightGrupo3</string>
     <string name="profile_background" />
     <string name="profile_picture" />
-    <string name="airline_logo">Airline Logo</string>
     <string name="book_now">Book Now</string>
     <string name="photos">Photos</string>
     <string name="overview">Overview</string>
@@ -12,4 +11,9 @@
     <string name="boracay">Boracay</string>
     <string name="_5d4n">5D4N</string>
     <string name="msg_vuelo">Vuelo reservado con exito!</string>
+    <string name="airline_logo">Airline Logo</string>
+    <string name="duration_icon">Duration Icon</string>
+    <string name="flight_icon">Flight Icon</string>
+    <string name="class_icon">Class Icon</string>
+    <string name="view_details">View Details</string>
 </resources>

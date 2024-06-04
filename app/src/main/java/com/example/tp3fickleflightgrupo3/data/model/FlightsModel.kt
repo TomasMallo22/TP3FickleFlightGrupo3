@@ -15,6 +15,7 @@ data class Flight(
     val airline_logo: String,
     val travel_class: String,
     val flight_number: String,
+    val price: String,
     val legroom: String,
     val extensions: List<String>,
     val overnight: Boolean = false,

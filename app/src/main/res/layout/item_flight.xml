@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/rounded_background"
     android:padding="16dp"
@@ -11,61 +12,222 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="12dp">
 
         <ImageView
             android:id="@+id/airlineLogo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
+            android:layout_width="48dp"
+            android:layout_height="32dp"
             android:contentDescription="@string/airline_logo" />
 
         <TextView
             android:id="@+id/airlineName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_weight="1"
+            android:layout_marginStart="8dp"
             android:text="Airline Name"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_light"
+            android:textSize="14sp"
+            android:textColor="#7E8B97" />
+
+        <ImageView
+            android:id="@+id/durationIcon"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="8dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_duration"
+            android:contentDescription="@string/duration_icon" />
 
         <TextView
             android:id="@+id/flightDuration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Duration" />
+            android:text="Duration"
+            android:fontFamily="@font/inter_light"
+            android:textSize="12sp"
+            android:textAlignment="viewEnd"
+            android:textColor="#7E8B97" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/departureAirport"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Departure Airport" />
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical"
+        android:weightSum="3">
 
-    <TextView
-        android:id="@+id/arrivalAirport"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Arrival Airport" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="start">
 
-    <TextView
-        android:id="@+id/flightClass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Class" />
+            <TextView
+                android:id="@+id/departureAirportId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EZE"
+                android:fontFamily="@font/inter"
+                android:textSize="20sp"
+                android:textColor="#1262AE"
+                android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/flightPrice"
+            <TextView
+                android:id="@+id/departureAirport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ezeiza International Airport"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="13sp"
+                android:textColor="#191919" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_oval"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:layout_width="123.27dp"
+                android:layout_height="0.57dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_line"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:layout_width="23.28dp"
+                android:layout_height="23.28dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_circle"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/flightIcon"
+                android:layout_width="10.87dp"
+                android:layout_height="10.87dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_flight"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:layout_width="123.27dp"
+                android:layout_height="0.57dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/flightIcon"
+                android:src="@drawable/ic_line"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_oval"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/arrivalAirportId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LAX"
+                android:fontFamily="@font/inter"
+                android:textSize="20sp"
+                android:textColor="#1262AE"
+                android:textStyle="bold"
+                android:gravity="end" />
+
+            <TextView
+                android:id="@+id/arrivalAirport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Los Angeles International Airport"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="12sp"
+                android:textColor="#191919"
+                android:gravity="end" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Price" />
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="12dp"
+        android:background="@drawable/rounded_background_class_price"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_chair"
+            android:contentDescription="@string/class_icon" />
+
+        <TextView
+            android:id="@+id/flightClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Business Class"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="12sp"
+            android:textColor="#7E8B97" />
+
+        <TextView
+            android:id="@+id/flightPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:text="From $1128"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnViewDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="View Details"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/view_details"
         android:textColor="@color/white"
-        android:backgroundTint="@color/orange" />
+        android:backgroundTint="@color/orange"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        app:cornerRadius="5dp" />
 </LinearLayout>
