@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.example.tp3fickleflightgrupo3.ui.explore.ExploreViewModel" />
@@ -41,7 +40,7 @@
                     android:id="@+id/heart_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/heart"
+                    android:src="@drawable/ic_heart_white"
                     android:background="@null"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -121,7 +120,7 @@
             android:lineSpacingExtra="4dp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/flight_block"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/card_paris"
             app:layout_constraintBottom_toTopOf="@id/recycler_trending_destinations" />
 
         <TextView
@@ -133,15 +132,15 @@
             android:lineSpacingExtra="1.94dp"
             app:layout_constraintTop_toTopOf="@id/text_trending_destinations"
             app:layout_constraintBottom_toBottomOf="@id/text_trending_destinations"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="@id/card_paris" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_trending_destinations"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/card_paris"
+            app:layout_constraintStart_toStartOf="@id/card_paris"
             app:layout_constraintTop_toBottomOf="@id/text_trending_destinations" />
 
         <!-- Offers -->
@@ -154,16 +153,16 @@
             android:lineSpacingExtra="4dp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/recycler_trending_destinations"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/recycler_offers" />
+            app:layout_constraintStart_toStartOf="@id/card_paris"
+            app:layout_constraintBottom_toTopOf="@id/recycler_offers_explore" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_offers"
+            android:id="@+id/recycler_offers_explore"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/card_paris"
+            app:layout_constraintStart_toStartOf="@id/card_paris"
             app:layout_constraintTop_toBottomOf="@id/text_offers" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

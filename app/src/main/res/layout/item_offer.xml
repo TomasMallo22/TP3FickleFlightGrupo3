@@ -1,55 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="264dp"
-    android:layout_height="86dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp">
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardCornerRadius="8dp">
-
-        <ImageView
-            android:id="@+id/offer_image"
-            android:layout_width="74dp"
-            android:layout_height="51dp"
-            android:scaleType="centerCrop"
-            android:layout_margin="15dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:id="@+id/offer_header"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toEndOf="@id/offer_image"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:gravity="center_vertical"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
             <TextView
-                android:id="@+id/offer_description_short"
+                android:id="@+id/limited_offer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:text="LIMITED OFFER!"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/text_limited_time"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:background="@drawable/rounded_background"
+                android:layout_marginEnd="10dp" />
+
+            <ImageView
+                android:id="@+id/heart_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="200dp"
+                android:paddingLeft="1.33dp"
+                android:paddingTop="2dp"
+                android:paddingRight="1.33dp"
+                android:paddingBottom="2dp"
+                android:src="@drawable/ic_heart_state" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/offer_description_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/offer_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/offer_image_and_details_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/offer_description_long"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/offer_image"
+                android:layout_width="104.44dp"
+                android:layout_height="71.89dp"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="16dp"
+                android:layout_gravity="center_vertical" />
 
             <TextView
-                android:id="@+id/text_limited_time"
-                android:layout_width="wrap_content"
+                android:id="@+id/offer_details"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Limited time offer!"
+                android:layout_weight="1"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="#7E8B97"
                 android:textSize="14sp"
-                android:textColor="#808080"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/offer_description_short" />
+                android:layout_gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/semi_arrow_icon"
+                android:layout_width="4.9dp"
+                android:layout_height="9.8dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_semiarrow" />
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

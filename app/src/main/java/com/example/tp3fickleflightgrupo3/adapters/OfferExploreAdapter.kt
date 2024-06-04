@@ -11,7 +11,8 @@ class OfferExploreAdapter(private var offers: List<Offer>) :
     RecyclerView.Adapter<OfferExploreHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OfferExploreHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_offer, parent, false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_offer_explore, parent, false)
         return OfferExploreHolder(view)
     }
 

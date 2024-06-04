@@ -25,7 +25,7 @@ class ExploreFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentExploreBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -43,7 +43,7 @@ class ExploreFragment : Fragment() {
             adapter = trendingDestinationsAdapter
         }
 
-        binding.recyclerOffers.apply {
+        binding.recyclerOffersExplore.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = offersAdapter
         }
