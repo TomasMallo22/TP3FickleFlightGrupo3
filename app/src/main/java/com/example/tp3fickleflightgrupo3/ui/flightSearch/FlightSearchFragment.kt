@@ -49,11 +49,13 @@ class FlightSearchFragment : Fragment() {
         btnOneWay.setOnClickListener {
             toggleButtons(btnOneWay, btnRoundTrip)
             binding.etReturnDate.visibility = View.GONE
+            binding.ivReturnDateIcon.visibility = View.GONE
         }
 
         btnRoundTrip.setOnClickListener {
             toggleButtons(btnRoundTrip, btnOneWay)
             binding.etReturnDate.visibility = View.VISIBLE
+            binding.ivReturnDateIcon.visibility = View.VISIBLE
         }
 
         binding.btnSearch.setOnClickListener {

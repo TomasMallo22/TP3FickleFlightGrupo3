@@ -34,7 +34,8 @@ class FlightViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         arrivalAirportId.text = flight.arrival_airport.id
         arrivalAirport.text = flight.arrival_airport.name
         flightClass.text = flight.travel_class
-        flightPrice.text = "From $${flight.price}"
+        //Hardcodeamos el price porque el response del endpoint venia nulo
+        flightPrice.text = "From $912"
         Glide.with(itemView.context).load(R.drawable.ic_flight).into(flightIcon)
 
         btnViewDetails.setOnClickListener {

@@ -20,7 +20,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="432dp"
+            android:layout_height="460dp"
             android:background="@drawable/rounded_background"
             android:padding="12dp">
 
@@ -82,14 +82,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:hint="Select Departure" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="24dp"
@@ -104,6 +96,16 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:hint="Select Arrival" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -208,14 +210,14 @@
             android:textSize="16sp"
             android:lineSpacingExtra="4dp"
             android:textStyle="bold"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:paddingStart="16dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerOffersExplore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="2dp"
             android:paddingStart="8dp"
             android:paddingEnd="16dp"
             android:orientation="horizontal" />
