@@ -229,5 +229,6 @@
         android:textColor="@color/white"
         android:backgroundTint="@color/orange"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        app:cornerRadius="5dp" />
+        app:cornerRadius="5dp"
+        android:onClick="@{() -> viewModel.onViewDetailsClicked(flight)}" />
 </LinearLayout>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- res/navigation/nav_graph.xml -->
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,5 +23,14 @@
         <argument
             android:name="flights"
             app:argType="string" />
+        <action
+            android:id="@+id/action_flightResultsFragment_to_flightDetailFragment"
+            app:destination="@id/flightDetailFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/flightDetailFragment"
+        android:name="com.example.tp3fickleflightgrupo3.ui.flightDetail.FlightDetailFragment"
+        android:label="Flight Detail"
+        tools:layout="@layout/fragment_flight_detail" />
 </navigation>

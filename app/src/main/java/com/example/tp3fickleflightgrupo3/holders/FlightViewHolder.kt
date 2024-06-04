@@ -4,9 +4,11 @@ import Flight
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.tp3fickleflightgrupo3.R
+import com.example.tp3fickleflightgrupo3.ui.flightResult.FlightResultsFragmentDirections
 import com.google.android.material.button.MaterialButton
 
 class FlightViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -34,5 +36,12 @@ class FlightViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         flightClass.text = flight.travel_class
         flightPrice.text = "From $${flight.price}"
         Glide.with(itemView.context).load(R.drawable.ic_flight).into(flightIcon)
+
+        btnViewDetails.setOnClickListener {
+            val action =
+                FlightResultsFragmentDirections.actionFlightResultsFragmentToFlightDetailFragment()
+            Navigation.findNavController(itemView).navigate(action)
+        }
+
     }
 }

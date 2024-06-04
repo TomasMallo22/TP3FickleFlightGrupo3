@@ -33,4 +33,5 @@ class FlightResultViewModel : ViewModel() {
             }
         }
     }
+
 }
