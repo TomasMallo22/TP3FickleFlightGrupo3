@@ -5,12 +5,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tp3fickleflightgrupo3.R
+import com.example.tp3fickleflightgrupo3.adapters.OfferExploreAdapter
 import com.example.tp3fickleflightgrupo3.databinding.FragmentFlightSearchBinding
 import com.google.android.material.button.MaterialButton
 import com.google.gson.Gson
@@ -20,6 +23,7 @@ class FlightSearchFragment : Fragment() {
 
     private lateinit var binding: FragmentFlightSearchBinding
     private val viewModel: FlightSearchViewModel by viewModels()
+    private lateinit var offersAdapter: OfferExploreAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,6 +41,7 @@ class FlightSearchFragment : Fragment() {
 
         val btnOneWay = view.findViewById<MaterialButton>(R.id.btnOneWay)
         val btnRoundTrip = view.findViewById<MaterialButton>(R.id.btnRoundTrip)
+        val etClass = binding.etClass
 
         setupDatePicker(binding.etDepartureDate)
         setupDatePicker(binding.etReturnDate)
@@ -74,6 +79,26 @@ class FlightSearchFragment : Fragment() {
                 // Show error message
             }
         })
+
+        offersAdapter = OfferExploreAdapter(emptyList())
+
+        binding.recyclerOffersExplore.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            adapter = offersAdapter
+        }
+
+        viewModel.offers.observe(viewLifecycleOwner, Observer { offers ->
+            offers?.let {
+                offersAdapter.updateOffers(it)
+                offersAdapter.notifyDataSetChanged()
+            }
+        })
+
+        // Setup the class dropdown
+        val classes = arrayOf("Economy", "Business", "First Class")
+        val classAdapter =
+            ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, classes)
+        etClass.setAdapter(classAdapter)
     }
 
     private fun setupDatePicker(editText: EditText) {
