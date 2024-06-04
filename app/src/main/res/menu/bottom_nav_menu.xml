@@ -5,7 +5,7 @@
         android:icon="@drawable/explore_selected"
         android:title="@string/explore" />
     <item
-        android:id="@+id/action_search"
+        android:id="@+id/flightSearchFragment"
         android:icon="@drawable/search_flights"
         android:title="@string/search" />
     <item
@@ -13,7 +13,7 @@
         android:icon="@drawable/offers"
         android:title="@string/offers" />
     <item
-        android:id="@+id/action_profile"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/userprofile"
         android:title="@string/profile" />
 </menu>
