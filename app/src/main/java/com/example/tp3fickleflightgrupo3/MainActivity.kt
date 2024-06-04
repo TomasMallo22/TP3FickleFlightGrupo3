@@ -3,6 +3,8 @@ package com.example.tp3fickleflightgrupo3
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -68,15 +70,28 @@ class MainActivity : AppCompatActivity() {
 
         //Comportamiento de fragmentos
         navController.addOnDestinationChangedListener { _, destination: NavDestination, _ ->
+            var profileImage: ImageView = findViewById(R.id.profile_image)
+            var logo: ImageView = findViewById(R.id.logo)
+
             when (destination.id) {
-                R.id.exploreFragment,
                 R.id.flightSearchFragment,
                 R.id.offerFragment,
-                R.id.profileFragment,
-                R.id.settingsFragment
+                R.id.profileFragment
                 -> {
                     navView.visibility = BottomNavigationView.VISIBLE
                     binding.contentMainInclude.customToolbar.visibility = MaterialToolbar.VISIBLE
+//                    binding.contentMainInclude.customToolbar.logo = null
+                    profileImage.visibility = View.GONE
+                    logo.visibility = View.GONE
+                }
+                R.id.exploreFragment,
+                R.id.settingsFragment -> {
+                    navView.visibility = BottomNavigationView.VISIBLE
+                    binding.contentMainInclude.customToolbar.visibility = MaterialToolbar.VISIBLE
+//                    binding.contentMainInclude.customToolbar.logo = ContextCompat.getDrawable(this, R.drawable.logo)
+                    binding.contentMainInclude.customToolbar.title = null
+                    profileImage.visibility = View.VISIBLE
+                    logo.visibility = View.VISIBLE
                 }
                 else -> {
                     navView.visibility = BottomNavigationView.GONE
@@ -84,14 +99,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-//        esto no se si va
-//        binding.txtCloseApp.setOnClickListener(View.OnClickListener {
-//            finish()
-//        })
-
-//        Carga modo oscuro/claro
-//        loadPreferences()
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -103,14 +110,4 @@ class MainActivity : AppCompatActivity() {
         }
         return true;
     }
-
-//    Modo oscuro
-//    private fun loadPreferences() {
-//        val prefs = PreferenceManager.getDefaultSharedPreferences(this);
-//        if (prefs.getBoolean(getString(R.string.preference_night_mode_key), false)) {
-//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-//        } else {
-//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-//        }
-//    }
 }
