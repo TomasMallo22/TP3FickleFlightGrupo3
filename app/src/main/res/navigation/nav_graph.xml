@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/flightSearchFragment"
         android:name="com.example.tp3fickleflightgrupo3.ui.flightSearch.FlightSearchFragment"
-        android:label="Flight Search"
+        android:label="Búsqueda"
         tools:layout="@layout/fragment_flight_search">
         <action
             android:id="@+id/action_flightSearchFragment_to_flightResultsFragment"
@@ -28,9 +28,20 @@
             app:destination="@id/flightDetailFragment" />
     </fragment>
 
+
     <fragment
         android:id="@+id/flightDetailFragment"
         android:name="com.example.tp3fickleflightgrupo3.ui.flightDetail.FlightDetailFragment"
         android:label="Flight Detail"
         tools:layout="@layout/fragment_flight_detail" />
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.tp3fickleflightgrupo3.ui.profile.ProfileFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+
+
 </navigation>
