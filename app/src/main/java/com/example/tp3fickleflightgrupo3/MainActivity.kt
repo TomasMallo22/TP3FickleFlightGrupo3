@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         R.id.exploreFragment,
         R.id.flightSearchFragment,
         R.id.offerFragment,
-        R.id.profileFragment
+        R.id.profileFragment,
     )
 
     private lateinit var binding: ActivityMainBinding
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
         //NavigationView
         NavigationUI.setupActionBarWithNavController(this, navController, binding.drawerLayout)
-//        binding.navigationView.setupWithNavController(navController)
+        binding.navigationView.setupWithNavController(navController)
 
         //Comportamiento de fragmentos
         navController.addOnDestinationChangedListener { _, destination: NavDestination, _ ->

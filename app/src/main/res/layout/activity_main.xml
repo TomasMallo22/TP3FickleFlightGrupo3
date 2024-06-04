@@ -36,25 +36,26 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Navigation drawer -->
-<!--    <com.google.android.material.navigation.NavigationView-->
-<!--        android:id="@+id/navigation_view"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_gravity="start"-->
-<!--        android:fitsSystemWindows="true"-->
-<!--        android:clipToPadding="false"-->
-<!--        android:paddingBottom="40dp"-->
-<!--        app:menu="@layout/fragment_drawer_menu">-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="false"
+        android:paddingBottom="40dp"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/left_nav_menu">
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_gravity="bottom"-->
-<!--            android:layout_marginBottom="-40dp"-->
-<!--            android:id="@+id/txt_close_app"-->
-<!--            android:gravity="center"-->
-<!--            android:text="cerrar app" />-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="-40dp"
+            android:id="@+id/txt_close_app"
+            android:gravity="start"
+            android:text="@string/app_version" />
 
-<!--    </com.google.android.material.navigation.NavigationView>-->
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
