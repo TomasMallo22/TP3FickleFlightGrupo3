@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- res/navigation/nav_graph.xml -->
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/flightSearchFragment">
+    app:startDestination="@id/exploreFragment">
 
     <fragment
         android:id="@+id/flightSearchFragment"
         android:name="com.example.tp3fickleflightgrupo3.ui.flightSearch.FlightSearchFragment"
-        android:label="Flight Search"
+        android:label="Búsqueda"
         tools:layout="@layout/fragment_flight_search">
         <action
             android:id="@+id/action_flightSearchFragment_to_flightResultsFragment"
@@ -23,5 +23,37 @@
         <argument
             android:name="flights"
             app:argType="string" />
+        <action
+            android:id="@+id/action_flightResultsFragment_to_flightDetailFragment"
+            app:destination="@id/flightDetailFragment" />
     </fragment>
+
+
+    <fragment
+        android:id="@+id/flightDetailFragment"
+        android:name="com.example.tp3fickleflightgrupo3.ui.flightDetail.FlightDetailFragment"
+        android:label="Flight Detail"
+        tools:layout="@layout/fragment_flight_detail" />
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.tp3fickleflightgrupo3.ui.profile.ProfileFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+  
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.example.tp3fickleflightgrupo3.ui.explore.ExploreFragment"
+        android:label="Explore"
+        tools:layout="@layout/fragment_explore" />
+
+    <fragment
+        android:id="@+id/offerFragment"
+        android:name="com.example.tp3fickleflightgrupo3.ui.offers.OfferFragment"
+        android:label="Offers"
+        tools:layout="@layout/fragment_offer" />
+
+
 </navigation>

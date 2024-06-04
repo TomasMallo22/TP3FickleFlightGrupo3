@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.tp3fickleflightgrupo3.data.model.Offer
+import com.example.tp3fickleflightgrupo3.provider.OffersProvider
 import com.example.tp3fickleflightgrupo3.service.FlightsApi
 import kotlinx.coroutines.launch
 import retrofit2.awaitResponse
@@ -17,6 +19,12 @@ class FlightSearchViewModel : ViewModel() {
 
     private val _error = MutableLiveData<String>()
     val error: LiveData<String> get() = _error
+
+    private val _offers = MutableLiveData<List<Offer>>().apply {
+        value = OffersProvider.offerList
+        Log.d("ExploreViewModel", "Offers Loaded: ${OffersProvider.offerList}")
+    }
+    val offers: LiveData<List<Offer>> = _offers
 
     fun searchFlights() {
         viewModelScope.launch {
