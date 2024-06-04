@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_flightResultsFragment_to_flightDetailFragment"
             app:destination="@id/flightDetailFragment" />
+        <action
+            android:id="@+id/action_flightResultsFragment_to_flightSearchFragment"
+            app:destination="@id/flightSearchFragment" />
     </fragment>
 
 

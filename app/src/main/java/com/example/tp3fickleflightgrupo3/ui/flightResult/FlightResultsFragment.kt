@@ -51,7 +51,7 @@ class FlightResultsFragment : Fragment() {
         viewModel.searchFlights()
 
         binding.backArrow.setOnClickListener {
-            findNavController().navigateUp()
+            findNavController().navigate(R.id.action_flightResultsFragment_to_flightSearchFragment)
         }
     }
 }
