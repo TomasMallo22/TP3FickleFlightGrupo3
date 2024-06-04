@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tp3fickleflightgrupo3.R
 import com.example.tp3fickleflightgrupo3.databinding.FragmentFlightDetailBinding
@@ -46,9 +47,8 @@ class FlightDetailFragment : Fragment() {
 
         setupPhotoRecyclerView()
 
-        val backArrow = view.findViewById<ImageView>(R.id.backArrow)
-        backArrow.setOnClickListener {
-            requireActivity()
+        binding.backArrow.setOnClickListener {
+            findNavController().navigateUp()
         }
 
         val favIcon = view.findViewById<ImageView>(R.id.favIcon)
