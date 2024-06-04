@@ -25,27 +25,20 @@
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="130dp"
-            android:padding="16dp">
+            android:layout_marginTop="190dp"
+            android:padding="16dp"
+            android:background="@drawable/rounded_background">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="start"
-                        android:background="@drawable/ic_profile_image_border"
-                        android:clipToOutline="true"
-                        android:contentDescription="@string/profile_picture"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/ic_profile_image_round" />
                 </FrameLayout>
 
                 <TextView
@@ -185,5 +178,17 @@
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="140dp"
+            android:background="@drawable/ic_profile_image_border"
+            android:clipToOutline="true"
+            android:contentDescription="@string/profile_picture"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_profile_image_round" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
