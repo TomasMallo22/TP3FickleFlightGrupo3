@@ -7,7 +7,9 @@ import com.example.tp3fickleflightgrupo3.R
 import com.example.tp3fickleflightgrupo3.data.model.Offer
 import com.example.tp3fickleflightgrupo3.holders.OfferHolder
 
-class OfferAdapter(private var offers: List<Offer>) :
+class OfferAdapter(
+    private var offers: List<Offer>
+) :
     RecyclerView.Adapter<OfferHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OfferHolder {

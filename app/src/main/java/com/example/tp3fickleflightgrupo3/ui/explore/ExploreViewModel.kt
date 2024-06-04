@@ -4,10 +4,12 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.tp3fickleflightgrupo3.R
 import com.example.tp3fickleflightgrupo3.data.model.Destination
 import com.example.tp3fickleflightgrupo3.data.model.Offer
 import com.example.tp3fickleflightgrupo3.provider.OffersProvider
 import com.example.tp3fickleflightgrupo3.provider.TrendingDestinationsProvider
+import com.google.android.material.button.MaterialButton
 
 class ExploreViewModel : ViewModel() {
 
@@ -19,6 +21,7 @@ class ExploreViewModel : ViewModel() {
         )
     }
     val trendingDestinations: LiveData<List<Destination>> = _trendingDestinations
+
 
     private val _offers = MutableLiveData<List<Offer>>().apply {
         value = OffersProvider.offerList

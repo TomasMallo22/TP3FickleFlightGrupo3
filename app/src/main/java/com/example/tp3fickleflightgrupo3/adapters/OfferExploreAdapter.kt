@@ -7,7 +7,10 @@ import com.example.tp3fickleflightgrupo3.R
 import com.example.tp3fickleflightgrupo3.data.model.Offer
 import com.example.tp3fickleflightgrupo3.holders.OfferExploreHolder
 
-class OfferExploreAdapter(private var offers: List<Offer>) :
+class OfferExploreAdapter(
+    private var offers: List<Offer>,
+    private val onItemClick: (Offer) -> Unit
+) :
     RecyclerView.Adapter<OfferExploreHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OfferExploreHolder {
@@ -19,6 +22,9 @@ class OfferExploreAdapter(private var offers: List<Offer>) :
     override fun onBindViewHolder(holder: OfferExploreHolder, position: Int) {
         val offer = offers[position]
         holder.bind(offer)
+        holder.itemView.setOnClickListener {
+            onItemClick(offer)
+        }
     }
 
     override fun getItemCount(): Int = offers.size
