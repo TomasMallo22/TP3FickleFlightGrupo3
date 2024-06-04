@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.example.tp3fickleflightgrupo3.R
 import com.example.tp3fickleflightgrupo3.databinding.FragmentDrawerMenuBinding
 
 class DrawerMenuFragment : Fragment() {
@@ -26,11 +28,9 @@ class DrawerMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Observe ViewModel and set up UI interactions
-        // Example: viewModel.someLiveData.observe(viewLifecycleOwner, Observer { ... })
 
         binding.menuProfile.setOnClickListener {
-
+            findNavController().navigate(R.id.profileFragment)
         }
 
         binding.menuNotifications.setOnClickListener {
