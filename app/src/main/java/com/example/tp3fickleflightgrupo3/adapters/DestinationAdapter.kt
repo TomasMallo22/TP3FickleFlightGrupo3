@@ -7,8 +7,10 @@ import com.example.tp3fickleflightgrupo3.R
 import com.example.tp3fickleflightgrupo3.data.model.Destination
 import com.example.tp3fickleflightgrupo3.holders.DestinationHolder
 
-class DestinationAdapter(private var destinations: List<Destination>) :
-    RecyclerView.Adapter<DestinationHolder>() {
+class DestinationAdapter(
+    private var destinations: List<Destination>,
+    private val clickListener: (Destination) -> Unit
+) : RecyclerView.Adapter<DestinationHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DestinationHolder {
         val view = LayoutInflater.from(parent.context)
@@ -19,6 +21,7 @@ class DestinationAdapter(private var destinations: List<Destination>) :
     override fun onBindViewHolder(holder: DestinationHolder, position: Int) {
         val destination = destinations[position]
         holder.render(destination)
+        holder.itemView.setOnClickListener { clickListener(destination) }
     }
 
     override fun getItemCount(): Int = destinations.size

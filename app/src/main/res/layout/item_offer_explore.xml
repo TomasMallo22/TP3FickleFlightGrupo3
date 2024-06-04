@@ -59,7 +59,7 @@
                     android:id="@+id/text_limited_time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Limited time offer!"
+                    android:text="@string/limited_time_offer"
                     android:textSize="14sp"
                     android:textColor="#999999"
                     android:layout_marginTop="4dp"

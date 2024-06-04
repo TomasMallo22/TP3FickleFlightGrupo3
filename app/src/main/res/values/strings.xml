@@ -27,4 +27,12 @@
     <string name="lapiz" />
     <string name="generales">Generales</string>
     <string name="modo_oscuro">Modo Oscuro</string>
+    <string name="limited_time_offer">Limited time offer!</string>
+    <string name="limited_offer">LIMITED OFFER!</string>
+    <string name="flight">Flight</string>
+    <string name="trending_destinations">Trending Destinations</string>
+    <string name="see_all">See All</string>
+    <string name="price_paris">$1299</string>
+    <string name="from">From</string>
+    <string name="paris">Paris</string>
 </resources>
