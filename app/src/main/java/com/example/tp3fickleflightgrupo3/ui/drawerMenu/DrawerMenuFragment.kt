@@ -30,7 +30,7 @@ class DrawerMenuFragment : Fragment() {
 
 
         binding.menuProfile.setOnClickListener {
-            findNavController().navigate(R.id.profileFragment)
+
         }
 
         binding.menuNotifications.setOnClickListener {
