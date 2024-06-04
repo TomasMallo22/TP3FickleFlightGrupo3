@@ -20,7 +20,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="432dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/rounded_background"
             android:padding="12dp">
 
@@ -193,7 +193,7 @@
                     android:id="@+id/btnSearch"
                     style="@style/FlightSearchButton"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginTop="16dp"
                     android:text="Search"
                     app:cornerRadius="5dp" />
