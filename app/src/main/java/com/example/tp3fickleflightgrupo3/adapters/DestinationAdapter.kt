@@ -5,18 +5,18 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tp3fickleflightgrupo3.R
 import com.example.tp3fickleflightgrupo3.data.model.Destination
-import com.example.tp3fickleflightgrupo3.holders.TrendingDestinationHolder
+import com.example.tp3fickleflightgrupo3.holders.DestinationHolder
 
-class TrendingDestinationsAdapter(private var destinations: List<Destination>) :
-    RecyclerView.Adapter<TrendingDestinationHolder>() {
+class DestinationAdapter(private var destinations: List<Destination>) :
+    RecyclerView.Adapter<DestinationHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrendingDestinationHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DestinationHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_trending_destination, parent, false)
-        return TrendingDestinationHolder(view)
+        return DestinationHolder(view)
     }
 
-    override fun onBindViewHolder(holder: TrendingDestinationHolder, position: Int) {
+    override fun onBindViewHolder(holder: DestinationHolder, position: Int) {
         val destination = destinations[position]
         holder.render(destination)
     }

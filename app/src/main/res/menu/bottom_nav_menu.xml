@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/action_explore"
+        android:id="@+id/exploreFragment"
         android:icon="@drawable/explore_selected"
         android:title="@string/explore" />
     <item
@@ -9,7 +9,7 @@
         android:icon="@drawable/search_flights"
         android:title="@string/search" />
     <item
-        android:id="@+id/action_offers"
+        android:id="@+id/offerFragment"
         android:icon="@drawable/offers"
         android:title="@string/offers" />
     <item

@@ -14,7 +14,7 @@ class OffersProvider {
             ),
             Offer(
                 R.drawable.visa_card,
-                "25% discount with your Visa credit cards",
+                "25% discount with your VISA credit cards",
                 "25% discount with your VISA credit or debit cards",
                 "Use your VISA credit or debit card with any transaction and get 25% discount instantly!"
             )

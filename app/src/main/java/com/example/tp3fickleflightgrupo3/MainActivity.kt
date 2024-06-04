@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
 
     private val fragmentsNavigation = setOf(
-        R.id.action_explore,
+        R.id.exploreFragment,
         R.id.flightSearchFragment,
-        R.id.action_offers,
+        R.id.offerFragment,
         R.id.profileFragment
     )
 
@@ -67,9 +67,9 @@ class MainActivity : AppCompatActivity() {
         //Comportamiento de fragmentos
         navController.addOnDestinationChangedListener { _, destination: NavDestination, _ ->
             when (destination.id) {
-                R.id.action_explore,
+                R.id.exploreFragment,
                 R.id.flightSearchFragment,
-                R.id.action_offers,
+                R.id.offerFragment,
                 R.id.profileFragment
                 -> {
                     navView.visibility = BottomNavigationView.VISIBLE
