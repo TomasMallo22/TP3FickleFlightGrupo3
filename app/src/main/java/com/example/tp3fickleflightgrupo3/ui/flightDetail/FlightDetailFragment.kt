@@ -6,12 +6,12 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.tp3fickleflightgrupo3.R
 import com.example.tp3fickleflightgrupo3.databinding.FragmentFlightDetailBinding
 
@@ -45,6 +45,16 @@ class FlightDetailFragment : Fragment() {
         }
 
         setupPhotoRecyclerView()
+
+        val backArrow = view.findViewById<ImageView>(R.id.backArrow)
+        backArrow.setOnClickListener {
+            requireActivity()
+        }
+
+        val favIcon = view.findViewById<ImageView>(R.id.favIcon)
+        favIcon.setOnClickListener {
+            it.isSelected = !it.isSelected
+        }
     }
 
     private fun setupPhotoRecyclerView() {
